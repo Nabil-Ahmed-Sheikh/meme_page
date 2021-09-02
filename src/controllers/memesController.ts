@@ -97,7 +97,7 @@ const getStats: RequestHandler = async (req, res) => {
 // DELETE /api/meme
 // Public
 const deleteMeme: RequestHandler = async (req, res) => {
-    let id = req.body.id;
+    let id = req.params.id
     if(!id || !isValidObjectId(id)){
         return res.status(400).json({
             message: 'Bad Request'

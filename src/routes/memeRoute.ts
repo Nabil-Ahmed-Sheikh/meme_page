@@ -7,9 +7,9 @@ const router = Router();
 
 router.route('/').get(getMeme)
     .post(addMemeLink)
-    .delete(deleteMeme)
 router.route('/upload').post(upload.single('image') , uploadMeme);
 router.route('/stats').get(getStats);
+router.route('/:id').delete(deleteMeme)
 
 
 export default router;

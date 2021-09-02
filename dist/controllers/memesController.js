@@ -93,7 +93,7 @@ exports.getStats = getStats;
 // DELETE /api/meme
 // Public
 const deleteMeme = async (req, res) => {
-    let id = req.body.id;
+    let id = req.params.id;
     if (!id || !mongoose_1.isValidObjectId(id)) {
         return res.status(400).json({
             message: 'Bad Request'
