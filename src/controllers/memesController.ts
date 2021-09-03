@@ -15,7 +15,7 @@ const addMemeLink: RequestHandler = async (req, res) => {
     if(!validator.isURL(url)){
         return res.status(400).json({
             message: 'Bad Request'
-        })
+        })    
     };
 
     let newMeme = new Meme();
@@ -28,7 +28,7 @@ const addMemeLink: RequestHandler = async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         })
     }
 
@@ -50,7 +50,7 @@ const uploadMeme: RequestHandler = async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         })
     };
 };
@@ -132,7 +132,7 @@ const deleteMeme: RequestHandler = async (req, res) => {
         });
     } catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         })
     };
 };

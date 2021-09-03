@@ -14,7 +14,6 @@ app.use('/api/meme', memeRouter);
 
 connectDB(`${connectionURL}`);
 
-
 app.listen(port, () => {
     console.log(`Server is running at ${port}`);
 });

@@ -30,7 +30,7 @@ const addMemeLink = async (req, res) => {
     }
     catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         });
     }
 };
@@ -50,7 +50,7 @@ const uploadMeme = async (req, res) => {
     }
     catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         });
     }
     ;
@@ -127,7 +127,7 @@ const deleteMeme = async (req, res) => {
     }
     catch (error) {
         res.status(500).json({
-            message: error.message
+            message: "Something went wrong"
         });
     }
     ;
