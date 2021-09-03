@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "node build/index.js",
-    "build": "tsc",
-    "postinstall": "npm run tsc"
+    "dev": "nodemon build/index.js"
   },
   "keywords": [],
   "author": "",
