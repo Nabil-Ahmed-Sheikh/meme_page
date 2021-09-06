@@ -39,7 +39,8 @@ const addMemeLink: RequestHandler = async (req, res) => {
 // Public
 const uploadMeme: RequestHandler = async (req, res) => {
     const url = (req.file as {path: string}).path;
-
+    console.log("Hit");
+    
     let newMeme = new Meme();
     newMeme.url = url;
 

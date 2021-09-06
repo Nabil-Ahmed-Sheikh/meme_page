@@ -2,12 +2,14 @@ import express from 'express';
 import memeRouter from './routes/memeRoute';
 import dotenv from 'dotenv';
 import connectDB from './config/database';
+import cors from 'cors';
 dotenv.config();
 
 const port = process.env.PORT;
 const connectionURL = process.env.DB_CONNECTION_URL;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use('/api/meme', memeRouter);
 
